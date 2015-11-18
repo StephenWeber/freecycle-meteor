@@ -8,6 +8,11 @@ Feature: Guest views Home Page
     Given I am a new user
 
   @focus
-  Scenario: This scenario will run on both dev and CI
+  Scenario: Title is no longer default
     When I navigate to "/"
     Then I should see the title "Freecycle Meteor"
+
+  @focus
+  Scenario: Guest user sees posts
+    When I navigate to "/"
+    Then I should see the posts "National Posts"

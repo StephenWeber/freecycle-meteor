@@ -3,12 +3,25 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
+  <div class="container">
+    <header>
+      <h1>Welcome to Freecycle!</h1>
+      {{> loginButtons}}
+    </header>
+    {{> feed}}
+  </div>
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="feed">
+  <p>Here are the current posts in your area:</p>
+  <p class="post-type"><b>{{ userLocation }} Posts</b></p>
+  <ul>
+  {{# each posts }}
+    <li>{{> post}}</li>
+  {{/ each }}
+  </ul>
+</template>
+
+<template name="post">
+  {{title}} - {{link}}
 </template>

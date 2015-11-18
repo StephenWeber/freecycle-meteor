@@ -21,3 +21,5 @@ insecure                # Allow all DB writes from clients (for prototyping)
 xolvio:cucumber@=0.20.0_1
 velocity:console-reporter
 iron:router
+accounts-ui
+accounts-password
